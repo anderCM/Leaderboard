@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <img src="assets/img/leaderboard_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="leaderboard_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Leaderboard</b></h3>

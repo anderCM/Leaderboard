@@ -10,10 +10,11 @@ const DisplayScores = async (gameId) => {
   });
 
   const response = await ReadScores(gameId);
-  response?.result.map((record) => {
+  response?.result.map((record, index) => {
+    const bgLi = index % 2 === 0 ? 'list-group-item-light' : 'list-group-item-warning';
     const { user, score } = record;
     const liScore = document.createElement('li');
-    liScore.classList.add('list-group-item', 'list-group-item-action');
+    liScore.classList.add('list-group-item', 'list-group-item-action', bgLi);
     liScore.textContent = user + score;
 
     return listScores.appendChild(liScore);

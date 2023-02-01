@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="assets/img/leaderboard_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Leaderboard</b></h3>
@@ -111,7 +111,10 @@ Fork this project
 
 ### Usage
 
-To run the project, just fork it.
+To run the project, execute:
+- npm install
+- npm run build
+- npm start
 
 
 ### Run tests

@@ -39,11 +39,11 @@ refreshScore.addEventListener('click', async () => {
 
   const response = await ReadScores(gameId);
   response?.result.map((record) => {
-    const {user, score} = record;
+    const { user, score } = record;
     const liScore = document.createElement('li');
     liScore.classList.add('list-group-item', 'list-group-item-action');
-    liScore.textContent = `${user}: ${score}`;
-    
-    listScores.appendChild(liScore);
-  })
+    liScore.textContent = user + score;
+
+    return listScores.appendChild(liScore);
+  });
 });

@@ -5,7 +5,6 @@ import getGameId from './api/Game.js';
 import CreateScore from './modules/Scores/CreateScore.js';
 import DisplayScores from './modules/Scores/DisplayScores.js';
 
-/* SaveToLocalStorage('asdsasadasd'); */
 let gameId = null;
 const currentIdGame = ReadLocalStorage();
 

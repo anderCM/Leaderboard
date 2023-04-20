@@ -81,7 +81,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Comming Soon](https://github.com/anderCM/Leaderboard/)
+- [View Demo](https://app.netlify.com/sites/learder-board/settings/domain)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

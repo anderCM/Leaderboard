@@ -1,17 +1,17 @@
 import './style.css';
-import SaveToLocalStorage from './modules/Game/SaveIdGame.js';
-import ReadLocalStorage from './modules/Game/ReadIdGame.js';
+import saveToLocalStorage from './modules/Game/SaveIdGame.js';
+import readLocalStorage from './modules/Game/ReadIdGame.js';
 import getGameId from './api/Game.js';
-import CreateScore from './modules/Scores/CreateScore.js';
-import DisplayScores from './modules/Scores/DisplayScores.js';
+import createScore from './modules/Scores/CreateScore.js';
+import displayScores from './modules/Scores/DisplayScores.js';
 
 let gameId = null;
-const currentIdGame = ReadLocalStorage();
+const currentIdGame = readLocalStorage();
 
 const getId = async () => {
   const result = await getGameId('My game score');
   const gameId = result.result.replace('Game with ID: ', '').replace(' added.', '');
-  SaveToLocalStorage(gameId);
+  saveToLocalStorage(gameId);
   return gameId;
 };
 
@@ -22,13 +22,13 @@ const form = document.getElementById('add-score-form');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  CreateScore(gameId);
+  createScore(gameId);
 });
 
 // Get recorded data
 const refreshScore = document.getElementById('refresh-score');
 refreshScore.addEventListener('click', () => {
-  DisplayScores(gameId);
+  displayScores(gameId);
 });
 
-DisplayScores(gameId);
+displayScores(gameId);

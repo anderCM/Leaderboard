@@ -1,8 +1,8 @@
 import getAllScores from '../../api/Score.js';
 
-const ReadScores = async (gameId) => {
+const readScores = async (gameId) => {
   const response = await getAllScores(gameId);
   return response;
 };
 
-export default ReadScores;
+export default readScores;

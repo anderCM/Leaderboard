@@ -1,3 +1,3 @@
-const ReadLocalStorage = () => JSON.parse(localStorage.getItem('game'));
+const readLocalStorage = () => JSON.parse(localStorage.getItem('game'));
 
-export default ReadLocalStorage;
+export default readLocalStorage;

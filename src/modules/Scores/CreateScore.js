@@ -1,7 +1,7 @@
 import { saveRecord } from '../../api/Game.js';
 import SimpleToast from '../../Components/Toasts.js';
 
-const CreateScore = async (gameId) => {
+const createStore = async (gameId) => {
   const scoreUser = document.getElementById('score-name');
   const scorePoints = document.getElementById('score-score');
   const result = await saveRecord(gameId, scoreUser.value, scorePoints.value);
@@ -14,4 +14,4 @@ const CreateScore = async (gameId) => {
   scorePoints.value = '';
 };
 
-export default CreateScore;
+export default createStore;

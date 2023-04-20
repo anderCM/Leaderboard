@@ -1,5 +1,5 @@
-const SaveToLocalStorage = (value) => {
+const saveToLocalStorage = (value) => {
   localStorage.setItem('game', JSON.stringify({ id: value }));
 };
 
-export default SaveToLocalStorage;
+export default saveToLocalStorage;

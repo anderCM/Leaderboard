@@ -1,6 +1,6 @@
-import ReadScores from './ReadScores.js';
+import readScores from './ReadScores.js';
 
-const DisplayScores = async (gameId) => {
+const displayScores = async (gameId) => {
   const listScores = document.getElementById('list-scores');
 
   // Remove previous data
@@ -9,7 +9,7 @@ const DisplayScores = async (gameId) => {
     li.remove();
   });
 
-  const response = await ReadScores(gameId);
+  const response = await readScores(gameId);
   response?.result.map((record, index) => {
     const bgLi = index % 2 === 0 ? 'list-group-item-light' : 'list-group-item-warning';
     const { user, score } = record;
@@ -21,4 +21,4 @@ const DisplayScores = async (gameId) => {
   });
 };
 
-export default DisplayScores;
+export default displayScores;
